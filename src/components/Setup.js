@@ -1,7 +1,7 @@
 const Setup = ({joke}) => {
 
   return (
-    <p>Setup</p>
+    joke ? <h3>{joke.setup}</h3> : <p>loading...</p>
   )
 
 }
