@@ -1,4 +1,4 @@
-const Punchline = () => {
+const Punchline = ({joke}) => {
 
   return (
     <p>Punchline</p>

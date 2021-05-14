@@ -1,4 +1,4 @@
-const Setup = () => {
+const Setup = ({joke}) => {
 
   return (
     <p>Setup</p>
