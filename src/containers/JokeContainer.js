@@ -6,10 +6,15 @@ const JokeContainer = () => {
 
   const [currentJoke, setCurrentJoke] = useState(null);
   const [showPunchline, setShowPunchline] = useState(false);
+  const [counter, setCounter] = useState(-1);
 
   useEffect(() => {
     getJokeData()
   }, [])
+
+  useEffect(() => {
+    setCounter(counter + 1)
+  }, [currentJoke]);
 
   const getJokeData = () => {
     fetch("https://official-joke-api.appspot.com/jokes/general/random")
@@ -32,6 +37,8 @@ const JokeContainer = () => {
         joke={currentJoke} 
         revealPunchline={showPunchline}
       />
+      <button onClick={getJokeData}>Get Another</button>
+      <p>Jokes seen: {counter}</p>
     </>
   )
 
