@@ -17,10 +17,17 @@ const JokeContainer = () => {
       .then(data => setCurrentJoke(data[0]))
   }
 
+  const handleJokeClick = () => {
+    setShowPunchline(true);
+  }
+
   return(
     <>
       <h1>Joke app!</h1>
-      <Setup joke={currentJoke}/>
+      <Setup 
+        joke={currentJoke}
+        onJokeClick={handleJokeClick}
+      />
       <Punchline 
         joke={currentJoke} 
         revealPunchline={showPunchline}

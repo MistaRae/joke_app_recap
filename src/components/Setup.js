@@ -1,7 +1,9 @@
-const Setup = ({joke}) => {
+const Setup = ({joke, onJokeClick}) => {
 
   return (
-    joke ? <h3>{joke.setup}</h3> : <p>loading...</p>
+    joke ? 
+      <h3 onClick={onJokeClick}>{joke.setup}</h3> : 
+      <p>loading...</p>
   )
 
 }
