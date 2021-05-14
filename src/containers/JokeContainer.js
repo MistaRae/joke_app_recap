@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react';
 const JokeContainer = () => {
 
   const [currentJoke, setCurrentJoke] = useState(null);
+  const [showPunchline, setShowPunchline] = useState(false);
 
   useEffect(() => {
     getJokeData()
@@ -20,7 +21,10 @@ const JokeContainer = () => {
     <>
       <h1>Joke app!</h1>
       <Setup joke={currentJoke}/>
-      <Punchline joke={currentJoke}/>
+      <Punchline 
+        joke={currentJoke} 
+        revealPunchline={showPunchline}
+      />
     </>
   )
 

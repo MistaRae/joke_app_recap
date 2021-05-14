@@ -1,7 +1,7 @@
-const Punchline = ({joke}) => {
+const Punchline = ({joke, revealPunchline}) => {
 
   return (
-    <p>Punchline</p>
+    revealPunchline ? <p>Punchline</p> : <p>Click the joke to reveal the punchline...</p>
   )
 
 }
